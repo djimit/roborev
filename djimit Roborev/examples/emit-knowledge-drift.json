@@ -1,0 +1,15 @@
+{
+  "source": "djimitkbwiki",
+  "event": "knowledge drift detected",
+  "repo": "DjimIT/kb-wiki",
+  "branch": "main",
+  "sha": "jkl3456",
+  "review_id": "rr-202",
+  "affected_files": ["docs/auth-patterns.md"],
+  "finding_class": "stale-wiki-entry",
+  "severity": "low",
+  "wiki_ref": "https://wiki.djimit.nl/auth-patterns",
+  "qdrant_reembed_required": true,
+  "graphstore_update_required": true,
+  "context": "Wiki entry for auth-patterns is stale — code has moved to JWT but docs still reference sessions."
+}

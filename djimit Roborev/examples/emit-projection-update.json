@@ -1,0 +1,12 @@
+{
+  "source": "roborev",
+  "event": "qdrant projection stale",
+  "repo": "inference-forge/embeddings",
+  "branch": "main",
+  "sha": "mno7890",
+  "review_id": "rr-203",
+  "affected_files": ["src/embeddings/project.ts"],
+  "finding_class": "outdated-projection",
+  "severity": "medium",
+  "context": "Embedding projection in Qdrant is stale after model upgrade. Re-projection needed."
+}
