@@ -1,0 +1,42 @@
+name: roborev CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: node --test "test/**/*.test.mjs"
+
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate all examples emit without error
+        run: |
+          for f in examples/emit-*.json; do
+            echo ">>> $f"
+            node bin/roborev.mjs emit --dry-run --event "$f"
+          done
+      - name: Verify status command
+        run: |
+          echo '{"source":"roborev","event":"review.failed","dedupe_key":"ci:test","status":"todo","created_at":"2026-01-01T00:00:00Z"}' > /tmp/ci-test.jsonl
+          node bin/roborev.mjs status --out /tmp/ci-test.jsonl
+      - name: Verify schema command
+        run: node bin/roborev.mjs schema
+      - name: Verify version command
+        run: node bin/roborev.mjs version

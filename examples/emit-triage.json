@@ -1,0 +1,12 @@
+{
+  "source": "roborev",
+  "event": "review.completed",
+  "repo": "djimitflo/core",
+  "branch": "feature/auth",
+  "sha": "def5678",
+  "review_id": "rr-200",
+  "affected_files": ["src/middleware/auth.ts", "src/routes/login.ts"],
+  "finding_class": "high-severity-finding",
+  "severity": "high",
+  "context": "Review completed with high-severity finding: hardcoded secret in auth middleware."
+}

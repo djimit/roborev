@@ -1,0 +1,12 @@
+{
+  "source": "roborev",
+  "event": "review.failed",
+  "repo": "djimit Roborev",
+  "branch": "smoke/triage",
+  "sha": "deadbeef-triage-0002",
+  "review_id": "rr-smoke-triage-002",
+  "affected_files": ["src/auth.ts"],
+  "finding_class": "secret-leak-risk",
+  "severity": "high",
+  "context": "SMOKE TEST (triage-gate) — high-severity finding parked in backlog/needs-assignment so the Daily roborev triage routine can triage it. Safe to close/delete."
+}

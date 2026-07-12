@@ -1,0 +1,12 @@
+{
+  "source": "roborev",
+  "event": "review.failed",
+  "repo": "djimit Roborev",
+  "branch": "smoke/validation",
+  "sha": "deadbeef-smoke-0001",
+  "review_id": "rr-smoke-001",
+  "affected_files": ["README.md"],
+  "finding_class": "smoke-test",
+  "severity": "low",
+  "context": "SMOKE TEST — end-to-end validation of roborev->Paperclip pipeline. Safe to close/delete."
+}

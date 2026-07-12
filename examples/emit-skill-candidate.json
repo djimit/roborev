@@ -1,0 +1,13 @@
+{
+  "source": "roborev",
+  "event": "repeated finding",
+  "repo": "djimitflo/core",
+  "branch": "feature/payments",
+  "sha": "ghi9012",
+  "review_id": "rr-201",
+  "affected_files": ["src/payments/validate.ts"],
+  "finding_class": "missing-input-validation",
+  "severity": "medium",
+  "repeat_count": 4,
+  "context": "Input validation missing — flagged 4 times across reviews. Candidate for skill extraction."
+}

@@ -1,0 +1,13 @@
+{
+  "name": "roborev",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Commit-native review daemon. Emits review events as Paperclip-ready tasks (JSONL spillover) into the Djimit work-control-plane.",
+  "bin": { "roborev": "./bin/roborev.mjs" },
+  "scripts": {
+    "emit:example": "roborev emit < examples/emit-review-failed.json --out /tmp/roborev-test.pending.jsonl",
+    "test": "node --test \"test/**/*.test.mjs\""
+  },
+  "engines": { "node": ">=20" }
+}

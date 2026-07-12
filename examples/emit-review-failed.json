@@ -1,0 +1,12 @@
+{
+  "source": "roborev",
+  "event": "review.failed",
+  "repo": "example/djimit",
+  "branch": "feature/x",
+  "sha": "abc1234",
+  "review_id": "rr-100",
+  "affected_files": ["src/auth.ts"],
+  "finding_class": "missing-tests",
+  "severity": "high",
+  "context": "roborev flagged missing tests for src/auth.ts on commit abc1234."
+}
