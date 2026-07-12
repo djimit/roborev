@@ -1,16 +1,16 @@
 ## 1. Pre-registration
 
 - [x] Fix the model, adapter, holdout, decoding, and thresholds
-- [ ] Verify adapter and CUDA runtime hashes/state
+- [x] Verify adapter and CUDA runtime hashes/state
 
 ## 2. Paired Evaluation
 
-- [ ] Run base evaluation once
-- [ ] Run adapter evaluation once
-- [ ] Verify exact paired case coverage
+- [x] Run base evaluation once
+- [x] Run adapter evaluation once
+- [x] Verify exact paired case coverage
 
 ## 3. Decision
 
-- [ ] Apply the pre-registered promotion gate
-- [ ] Publish machine-readable and human-readable evidence
-- [ ] Record the final promotion or rejection decision
+- [x] Apply the pre-registered promotion gate
+- [x] Publish machine-readable and human-readable evidence
+- [x] Record the final promotion or rejection decision
