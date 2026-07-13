@@ -6,12 +6,12 @@
 
 ## 2. Evaluation
 
-- [ ] Run the eight-case paired canary screen
-- [ ] Run the paired 60-case evaluation only if the screen passes
-- [ ] Verify completeness, oracle provenance, paired churn, and over-refusal
+- [x] Run the eight-case paired canary screen
+- [x] Stop before the paired 60-case evaluation after screen rejection
+- [x] Verify completeness, oracle provenance, paired churn, and over-refusal
 
 ## 3. Decision
 
-- [ ] Apply the pre-registered gates without threshold changes
-- [ ] Publish machine-readable and human-readable evidence
-- [ ] Record the bounded next step and verify production is unchanged
+- [x] Apply the pre-registered gates without threshold changes
+- [x] Publish machine-readable and human-readable evidence
+- [x] Record the bounded next step and verify production is unchanged
