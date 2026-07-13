@@ -6,11 +6,11 @@
 
 ## 2. Evaluation
 
-- [ ] Run three sequential repetitions of all eight canaries
-- [ ] Verify response hashes, oracle outcomes, completeness, and manifest hashes
+- [x] Run three sequential repetitions of all eight canaries
+- [x] Verify response hashes, oracle outcomes, completeness, and manifest hashes
 
 ## 3. Decision
 
-- [ ] Apply the pre-registered repeatability gate
-- [ ] Publish machine-readable and human-readable evidence
-- [ ] Record the bounded next-step decision and verify production is unchanged
+- [x] Apply the pre-registered repeatability gate
+- [x] Publish machine-readable and human-readable evidence
+- [x] Record the bounded next-step decision and verify production is unchanged
