@@ -6,13 +6,13 @@
 
 ## 2. Implementation
 
-- [ ] Port the four canonical oracle types to TypeScript
-- [ ] Export all 12 anchors with no skipped cases
-- [ ] Add focused pass/fail and artifact coverage tests
+- [x] Port the four canonical oracle types to TypeScript
+- [x] Export all 12 anchors with no skipped cases
+- [x] Add focused pass/fail and artifact coverage tests
 
 ## 3. Verification
 
-- [ ] Pass focused and full repository gates
+- [x] Pass focused and full repository gates
 - [ ] Run the 12-case isolated candidate check
 - [ ] Verify response hashes, oracle outcomes, and provenance against R32
 
