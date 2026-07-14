@@ -13,11 +13,11 @@
 ## 3. Verification
 
 - [x] Pass focused and full repository gates
-- [ ] Run the 12-case isolated candidate check
-- [ ] Verify response hashes, oracle outcomes, and provenance against R32
+- [x] Run the 12-case isolated candidate check
+- [x] Verify response hashes, oracle outcomes, and provenance against R32 (response gate failed)
 
 ## 4. Promotion
 
-- [ ] Promote only after every gate passes; otherwise revert
+- [x] Promote only after every gate passes; otherwise revert (candidate reverted)
 - [ ] Pass the same 12-case live production check and retain rollback
-- [ ] Publish evidence and final repository/runtime state
+- [x] Publish evidence and final repository/runtime state
