@@ -15,6 +15,7 @@ callback to terminate Node.
 - Full suite: 1,300 passed and 15 skipped
 - Lint, type-check, and full production build: passed
 - Workstation checkout and build: clean at `29ff7eec`
+- GitHub CI, CodeQL, and Secret Scan workflows: passed for `29ff7eec`
 
 The Express type pin was required after merging the upstream Express 5 type
 update. It keeps route parameters compatible with this repository's
