@@ -6,13 +6,13 @@
 
 ## 2. Implementation
 
-- [ ] Contain and log heartbeat tick errors
-- [ ] Add a focused locked-database regression test
-- [ ] Pass focused and full repository gates
+- [x] Contain and log heartbeat tick errors
+- [x] Add a focused locked-database regression test
+- [x] Pass focused and full repository gates
 
 ## 3. Promotion
 
-- [ ] Publish the scoped fix
-- [ ] Pass an isolated runtime canary
-- [ ] Promote with `unless-stopped` and retained R31 rollback
-- [ ] Verify live health, mounts, image, and restart policy
+- [x] Publish the scoped fix
+- [x] Pass an isolated runtime canary
+- [x] Promote with `unless-stopped` and retained R31 rollback
+- [x] Verify live health, mounts, image, and restart policy
