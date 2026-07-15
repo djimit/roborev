@@ -6,13 +6,13 @@
 
 ## 2. Isolated Candidate
 
-- [ ] Build the reverted R33 candidate from detached source
-- [ ] Start with copied production state and worker concurrency one
-- [ ] Run the exact 12-case request three consecutive times
+- [x] Build the reverted R33 candidate from detached source
+- [x] Start with copied production state and worker concurrency one
+- [x] Run the exact 12-case request three consecutive times
 
 ## 3. Decision
 
-- [ ] Compare all pairwise response hashes
-- [ ] Verify all oracle outcomes and provenance against R32
-- [ ] Reject or qualify serialization without promoting it
-- [ ] Clean up and publish evidence plus final runtime state
+- [x] Compare all pairwise response hashes (gate failed)
+- [x] Verify all oracle outcomes and provenance against R32
+- [x] Reject or qualify serialization without promoting it (rejected)
+- [x] Clean up and publish evidence plus final runtime state
