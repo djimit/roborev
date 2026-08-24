@@ -7,7 +7,7 @@
   "bin": { "roborev": "./bin/roborev.mjs" },
   "scripts": {
     "emit:example": "roborev emit < examples/emit-review-failed.json --out /tmp/roborev-test.pending.jsonl",
-    "test": "node --test \"test/**/*.test.mjs\""
+    "test": "node --test test/*.test.mjs"
   },
   "engines": { "node": ">=20" }
 }
