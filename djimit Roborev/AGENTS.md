@@ -2,7 +2,7 @@
 
 roborev is de **commit-native review daemon** van het Djimit ecosysteem. Het emit
 review-events als **Paperclip-ready tasks** (JSONL spillover) die door de
-work-control-plane (Paperclip op de Workstation) worden opgepikt.
+work-control-plane (Paperclip op control VPS `vps-agentical`) worden opgepikt.
 
 ## Rol in het ecosysteem
 
@@ -22,7 +22,7 @@ Volledige integratie-spec: `~/.djimit/roborev/paperclip-integration.md`.
   - `roborev status` — samenvatting van pending JSONL (count by severity/status/type).
   - `roborev schema` — print task_types/severities.
   - `roborev version`
-- `scripts/ship-to-paperclip.sh` — scp pending → Workstation + ssh-exec `pc-flush-pending.ts`. Default `--dry-run`; `--live` creëert echte Paperclip-issues en archiveert de pending file. Geen secret op de MacBook.
+- `scripts/ship-to-paperclip.sh` — scp pending → control VPS + ssh-exec `pc-flush-pending.ts`. Default `--dry-run`; `--live` creëert echte Paperclip-issues en archiveert de pending file. Geen secret op de MacBook.
 - `test/events.test.mjs` — test suite (`npm test`).
 - `.github/workflows/ci.yml` — CI: tests (Node 20+22) + smoke (alle examples).
 - `examples/` — voorbeelden per task type: `emit-review-failed.json`, `emit-triage.json`, `emit-skill-candidate.json`, `emit-knowledge-drift.json`, `emit-projection-update.json`.
@@ -47,7 +47,7 @@ DjimitKBWiki/OpenSpec/Qdrant/GraphStore-events hebben eigen mappings — zie int
 ## Status (2026-07-12)
 
 Emitter + shipper werken end-to-end (dry-run getest). Paperclip-labels, -agents en
-4 routines staan live op de Workstation-instance. **Routines hebben nog geen
+4 roborev-routines staan live op de VPS-instance. **Routines hebben nog geen
 schedule-triggers** (budget-gate) — zie integration.md §9/§14.
 
 Toegevoegd: test suite (25 tests), `roborev status` subcommando, CI workflow,
