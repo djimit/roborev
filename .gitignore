@@ -1,1 +1,23 @@
 .DS_Store
+
+# ponytail: this repo's root IS $HOME (see paperclip-integration.md).
+# Allowlist-only so a stray `git add -A`/`git add .` from $HOME can
+# never sweep in SSH keys, credentials, or unrelated projects.
+# Upgrade path: move roborev to its own directory (~/workspace/roborev)
+# instead of maintaining this allowlist.
+/*
+!/.gitignore
+!/.github/
+!/AGENTS.md
+!/README.md
+!/package.json
+!/package-lock.json
+!/bin/
+!/src/
+!/scripts/
+!/test/
+!/examples/
+!/docs/
+!/openspec/
+!/VPS/
+!/djimit Roborev/
