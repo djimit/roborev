@@ -2,7 +2,7 @@
 
 roborev is de **commit-native review daemon** van het Djimit ecosysteem. Het emit
 review-events als **Paperclip-ready tasks** (JSONL spillover) die door de
-work-control-plane (**Djimitflo** op de control VPS 100.86.47.122; Paperclip wordt uitgefaseerd) worden opgepikt.
+work-control-plane (**Djimitflo** op de control VPS 100.86.47.122; Paperclip is verwijderd) worden opgepikt.
 
 Reference governance-implementation voor agent-loops: ~/workspace/loop-engineering
 (eigen repo + CI); deze file beschrijft alleen roborev zelf.
@@ -11,7 +11,7 @@ Reference governance-implementation voor agent-loops: ~/workspace/loop-engineeri
 
 - roborev: emit review events (per commit/branch). **Geen** eigen taakstaat.
 - DjimitKBWiki: kennis-cockpit.
-- **Djimitflo**: work control plane (work items, panel-review, goals, approvals, loops). Paperclip: read-only, wordt uitgefaseerd.
+- **Djimitflo**: work control plane (work items, panel-review, goals, approvals, loops). Paperclip is op 2026-09-21 uitgezet en van de VPS verwijderd (archief: Synology `/mnt/nas/vps-backups/paperclip-retirement-20260921/`).
 - Qdrant/GraphStore: memory & causality.
 - Djimitflo: runtime/orchestration.
 
