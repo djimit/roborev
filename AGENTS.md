@@ -2,7 +2,7 @@
 
 roborev is de **commit-native review daemon** van het Djimit ecosysteem. Het emit
 review-events als **Paperclip-ready tasks** (JSONL spillover) die door de
-work-control-plane (Paperclip op de control VPS 100.86.47.122) worden opgepikt.
+work-control-plane (**Djimitflo** op de control VPS 100.86.47.122; Paperclip wordt uitgefaseerd) worden opgepikt.
 
 Reference governance-implementation voor agent-loops: ~/workspace/loop-engineering
 (eigen repo + CI); deze file beschrijft alleen roborev zelf.
@@ -11,7 +11,7 @@ Reference governance-implementation voor agent-loops: ~/workspace/loop-engineeri
 
 - roborev: emit review events (per commit/branch). **Geen** eigen taakstaat.
 - DjimitKBWiki: kennis-cockpit.
-- **Paperclip**: work control plane (taakcoördinatie, agents, routines, governance).
+- **Djimitflo**: work control plane (work items, panel-review, goals, approvals, loops). Paperclip: read-only, wordt uitgefaseerd.
 - Qdrant/GraphStore: memory & causality.
 - Djimitflo: runtime/orchestration.
 
@@ -25,7 +25,7 @@ Volledige integratie-spec: `~/.djimit/roborev/paperclip-integration.md`.
   - `roborev status` — samenvatting van pending JSONL (count by severity/status/type).
   - `roborev schema` — print task_types/severities.
   - `roborev version`
-- `scripts/ship-to-paperclip.sh` — scp pending → control VPS + ssh-exec `pc-flush-pending.ts`. Default `--dry-run`; `--live` creëert echte Paperclip-issues en archiveert de pending file. Geen secret op de MacBook.
+- `scripts/ship-to-djimitflo.sh` — publiceert pending → `roborev.finding` events op de Djimit event bus (`http://100.86.47.122:8083`, stream `djimit.events`); Djimitflo maakt er work items van (dedupe via `dedupe_key`). Default `--dry-run`; `--live` post en archiveert de pending file. `ship-to-paperclip.sh` is legacy (Paperclip wordt uitgefaseerd, zie Djimitflo ADR 0001).
 - `test/events.test.mjs` — test suite (`npm test`).
 - `.github/workflows/ci.yml` — CI: tests (Node 20+22) + smoke (alle examples).
 - `examples/` — voorbeelden per task type: `emit-review-failed.json`, `emit-triage.json`, `emit-skill-candidate.json`, `emit-knowledge-drift.json`, `emit-projection-update.json`.
