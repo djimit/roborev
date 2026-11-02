@@ -12,9 +12,9 @@ node bin/roborev.mjs emit --dry-run --event examples/emit-review-failed.json
 # emit to the real pending spillover
 node bin/roborev.mjs emit --event examples/emit-review-failed.json
 
-# ship pending tasks to Paperclip (dry-run by default; --live creates real issues)
-bash scripts/ship-to-paperclip.sh                # ~/.djimit/roborev/paperclip-tasks.pending.jsonl
-bash scripts/ship-to-paperclip.sh /tmp/x.jsonl --live
+# ship pending findings to Djimitflo via the event bus (dry-run by default; --live posts roborev.finding)
+bash scripts/ship-to-djimitflo.sh                # ~/.djimit/roborev/paperclip-tasks.pending.jsonl
+bash scripts/ship-to-djimitflo.sh /tmp/x.jsonl --live
 ```
 
 See `AGENTS.md` and `~/.djimit/roborev/paperclip-integration.md` for the full
