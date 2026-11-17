@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // roborev CLI — commit-native review daemon event emitter.
-// Emits Paperclip-ready task rows into the pending JSONL spillover.
+// Emits Djimitflo-ready finding rows into the pending JSONL spillover.
 import { readFileSync } from "node:fs";
 import { appendFileSync, existsSync, mkdirSync } from "node:fs";
 import { dirname, resolve as resolvePath } from "node:path";
@@ -72,7 +72,7 @@ function main() {
     appendFileSync(out, line + "\n");
     console.error(`roborev: appended 1 task to ${out}`);
     console.error(`  dedupe_key=${e.dedupe_key}`);
-    console.error(`  ship with: scripts/ship-to-paperclip.sh ${out}`);
+    console.error(`  ship with: scripts/ship-to-djimitflo.sh ${out}`);
     return;
   }
   if (cmd === "schema") { console.log(JSON.stringify({ task_types: ["review_fix","triage","skill_candidate","knowledge_drift","projection_update"], severities:["critical","high","medium","low"] }, null, 2)); return; }

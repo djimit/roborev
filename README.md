@@ -1,7 +1,7 @@
 # roborev
 
-Commit-native review daemon. Emits review events as Paperclip-ready tasks (JSONL)
-for the Djimit work-control-plane.
+Commit-native review daemon. Emits review events as Djimitflo work items via
+JSONL spillover.
 
 ## Quickstart
 
@@ -12,11 +12,11 @@ node bin/roborev.mjs emit --dry-run --event examples/emit-review-failed.json
 # emit to the real pending spillover
 node bin/roborev.mjs emit --event examples/emit-review-failed.json
 
-# ship pending tasks to Paperclip (dry-run by default; --live creates real issues)
-bash scripts/ship-to-paperclip.sh                # ~/.djimit/roborev/paperclip-tasks.pending.jsonl
-bash scripts/ship-to-paperclip.sh /tmp/x.jsonl --live
+# ship pending tasks to Djimitflo (dry-run by default; --live posts to the event bus)
+bash scripts/ship-to-djimitflo.sh                # legacy pending filename is retained for compatibility
+bash scripts/ship-to-djimitflo.sh /tmp/x.jsonl --live
 ```
 
 See `AGENTS.md` and `~/.djimit/roborev/paperclip-integration.md` for the full
-integration spec (status, API, task mapping, labels, agent-assignment, routines,
-DjimitKBWiki/GraphStore coupling).
+integration spec. The external filename is retained for compatibility; the
+active control plane is Djimitflo.

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Commit-native review daemon. Emits review events as Paperclip-ready tasks (JSONL spillover) into the Djimit work-control-plane.",
+  "description": "Commit-native review daemon. Emits review events as Djimitflo work items via JSONL spillover.",
   "bin": {
     "roborev": "./bin/roborev.mjs"
   },
@@ -13,8 +13,5 @@
   },
   "engines": {
     "node": ">=20"
-  },
-  "dependencies": {
-    "better-sqlite3": "^13.0.1"
   }
 }

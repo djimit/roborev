@@ -1,4 +1,4 @@
-// roborev event contract — mirrors the Paperclip-ready JSONL schema in
+// roborev event contract — mirrors the Djimitflo JSONL event schema in
 // ~/.djimit/roborev/paperclip-integration.md §8.
 // Zero-dependency (Node ESM). Keep in sync with the integration artifact.
 
@@ -20,7 +20,7 @@ function dedupeKey(e) {
 
 function asArray(x) { return Array.isArray(x) ? x : x == null ? [] : [x]; }
 
-// Normalize a partial event into a complete Paperclip-ready task row.
+// Normalize a partial event into a complete Djimitflo-ready finding row.
 export function normalizeEvent(input) {
   if (!input || typeof input !== "object") throw new Error("event must be an object");
   const source = input.source || "roborev";
@@ -34,7 +34,7 @@ export function normalizeEvent(input) {
 
   const e = {
     source,
-    target: "paperclip",
+    target: "djimitflo",
     event,
     task_title: input.task_title || defaultTitle(event, taskType),
     task_type: taskType,

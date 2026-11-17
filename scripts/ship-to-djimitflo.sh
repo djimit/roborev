@@ -3,6 +3,7 @@
 # Djimitflo ingests them into work items (external-event-ingest-service). Idempotent: dedupe_key.
 # Default --dry-run (posts nothing). --live posts, then archives the pending file.
 set -euo pipefail
+# Keep the historical filename until the existing pending buffer is migrated.
 SRC="${1:-$HOME/.djimit/roborev/paperclip-tasks.pending.jsonl}"
 MODE="--dry-run"; [[ "${2:-}" == "--live" ]] && MODE="--live"
 BUS="${DJIMIT_EVENT_BUS_URL:-http://100.86.47.122:8083}"

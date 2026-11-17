@@ -9,7 +9,7 @@ test("normalizeEvent: minimal valid event produces complete task row", () => {
   assert.equal(e.event, "review.failed");
   assert.equal(e.task_type, "review_fix");
   assert.equal(e.severity, "medium");
-  assert.equal(e.target, "paperclip");
+  assert.equal(e.target, "djimitflo");
   assert.ok(e.dedupe_key);
   assert.ok(e.created_at);
   assert.equal(e.auto_assign, true);
