@@ -8,7 +8,8 @@ Authoritative integration spec lives outside this repo (it is workspace state, n
 
 Active runner:
 - `scripts/ship-to-djimitflo.sh` — dry-run by default; `--live` posts to the
-  Djimitflo event bus and archives only after a successful send.
+  Djimitflo event bus, requires a bus acknowledgement and records a
+  `.processed` idempotency ledger without moving the pending file.
 
 The old `pc-*` runner paths are historical Paperclip migration artifacts and
 must not be used for live publication.

@@ -12,8 +12,8 @@ node bin/roborev.mjs emit --dry-run --event examples/emit-review-failed.json
 # emit to the real pending spillover
 node bin/roborev.mjs emit --event examples/emit-review-failed.json
 
-# ship pending tasks to Djimitflo (dry-run by default; --live posts to the event bus)
-bash scripts/ship-to-djimitflo.sh                # legacy pending filename is retained for compatibility
+# ship pending findings to the Djimitflo event bus (dry-run by default; --live requires bus-ack)
+bash scripts/ship-to-djimitflo.sh                # historical pending filename retained for compatibility
 bash scripts/ship-to-djimitflo.sh /tmp/x.jsonl --live
 ```
 
